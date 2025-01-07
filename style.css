@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap');
+
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+body{
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Lexend", serif;
+    font-weight: 400;
+}
+header{
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        max-width: 1200px;
+        background: white;
+        z-index: 99;
+}
+header figure{
+    width: 5%;
+    margin: 8px 0;
+}
+header figure img{
+    width: 100%;
+}
+header nav ul{
+    display: flex;
+    gap: 16px;
+}
+header nav ul li{
+    text-decoration: none;
+    list-style: none;;
+}
+.intro{
+    display: flex;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    height: 100vh;
+    align-items: center;
+}
+.intro > section{
+    width: 60%;
+    position: relative;
+}
+.intro h1{
+    font-size: 56px;
+}
+
+.triangle-left {
+    width: 0;
+    transform: rotate(73deg);
+    right: 100px;
+    position: absolute;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-right: 150px solid #e52122;
+    border-bottom: 100px solid transparent;
+}
+.circle {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-color: #fad805;
+    border-radius: 50%;
+    right: 46%;
+    top: 45px;
+  }
+.square {
+    height: 150px;
+    width: 150px;
+    background-color: #0f4cb0;
+    transform: rotate(80deg);
+    position: absolute;
+    bottom: 5px;
+    right: 30%;
+}
+  
+
+.aboutMe{
+    font-weight: 400;
+}
+.aboutMe .aboutMeContent{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 70%;
+}
+.aboutMe .figureContainer{
+    width: 30%;
+}
