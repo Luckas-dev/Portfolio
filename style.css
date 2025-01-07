@@ -56,6 +56,9 @@ header nav ul li{
     text-decoration: none;
     list-style: none;;
 }
+.block{
+    margin: 8px 0;
+}
 .intro{
     display: flex;
     font-family: "Lexend", serif;
@@ -101,10 +104,25 @@ header nav ul li{
     bottom: 5px;
     right: 30%;
 }
-  
+.bigSquare {
+
+    height: 150px;
+    width: 150px;
+    background-color: #0f4cb0;
+    transform: rotate(80deg);
+    position: absolute;
+    bottom: 5px;
+    right: 30%;
+}
+.mask1 {
+
+    mask-repeat: no-repeat;    
+    mask-image: url(img/picture_of_me.jpg);
+  }
 
 .aboutMe{
     font-weight: 400;
+    justify-content: space-between;
 }
 .aboutMe .aboutMeContent{
     display: flex;
@@ -115,3 +133,60 @@ header nav ul li{
 .aboutMe .figureContainer{
     width: 30%;
 }
+
+.cards{
+    display: flex;
+    gap: 16px;
+
+}
+
+.card{
+    width: 23%;
+    border-radius: 5px;
+    overflow: hidden;
+    border: solid 1px lightgrey;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+.card figure{
+    width: 100%;
+    margin: 0;
+}
+.card article{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+
+
+/* Figure roatation testing  */
+
+.imagecontainer{
+    display: block;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border: solid 15px #0f4cb0;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(25deg);
+    position: relative;
+    
+   }
+   .imagecontainer img{
+
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-25deg);
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    width: 150%;
+    max-width: unset;
+   }
