@@ -5,6 +5,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    scroll-padding-top: 150px; /* height of sticky header */
   }
   
   *, *:before, *:after {
@@ -40,6 +41,7 @@ header{
         max-width: 1200px;
         background: white;
         z-index: 99;
+        top: 0;
 }
 header figure{
     width: 5%;
@@ -56,8 +58,16 @@ header nav ul li{
     text-decoration: none;
     list-style: none;;
 }
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+  }
+
 .block{
-    margin: 8px 0;
+    margin: 16px 0;
 }
 .intro{
     display: flex;
@@ -119,7 +129,18 @@ header nav ul li{
     mask-repeat: no-repeat;    
     mask-image: url(img/picture_of_me.jpg);
   }
+  h2{
+    margin-bottom: 8px;
+  }
 
+  h2::before{
+    content: "";
+    width: 4rem;
+    height: 5px;
+    display: block;
+    background: #e52122;
+
+  }
 .aboutMe{
     font-weight: 400;
     justify-content: space-between;
@@ -172,7 +193,7 @@ header nav ul li{
     width: 250px;
     height: 250px;
     overflow: hidden;
-    border: solid 15px #0f4cb0;
+    border: solid 15px #fad805;
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(25deg);
@@ -190,3 +211,42 @@ header nav ul li{
     width: 150%;
     max-width: unset;
    }
+
+
+
+
+   
+/* SHIFT */
+nav.shift ul li a {
+    position:relative;
+    z-index: 1;
+  }
+  nav.shift ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #fad805;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+
+
+  nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
