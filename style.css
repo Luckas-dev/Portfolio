@@ -58,10 +58,16 @@ nav ul li a:hover:after {
     visibility: visible;
     height: 100%;
 }
+.geoFigureContainer{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 16px;
+}
 
 .triangle-left {
     width: 0;
-    transform: rotate(73deg);
+    transform: rotate(50deg);
     right: 100px;
     /* position: absolute; */
     height: 0;
@@ -69,6 +75,15 @@ nav ul li a:hover:after {
     border-right: 60px solid #e52122;
     border-bottom: 40px solid transparent;
 }
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 33px 50px 33px;
+    border-color: transparent transparent #e52122 transparent;
+    transform: rotate(0deg);
+ }
 
 .circle {
     height: 50px;
@@ -84,7 +99,7 @@ nav ul li a:hover:after {
     height: 50px;
     width: 50px;
     background-color: #0f4cb0;
-    transform: rotate(80deg);
+    /* transform: rotate(80deg); */
     /* position: absolute; */
     bottom: 5px;
     right: 30%;
