@@ -1,86 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap');
 
-
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-    scroll-padding-top: 150px;
-    /* height of sticky header */
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-body {
-    max-width: 1200px;
-    margin: auto;
+body{
     font-family: "Lexend", serif;
     font-weight: 400;
+    
 }
-
-header {
+header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    max-width: 1200px;
-    background: white;
-    z-index: 99;
-    top: 0;
+    padding: 12px;
 }
-
-header figure {
-    width: 5%;
-    margin: 8px 0;
+header figure{
+    width: 15%;
 }
-
-header figure img {
+header figure img{
     width: 100%;
 }
-
 header nav ul {
-    display: flex;
-    gap: 16px;
+
 }
 
 header nav ul li {
     text-decoration: none;
     list-style: none;
-    ;
 }
 
 nav ul li a {
+    position: relative;
+    z-index: 1;
     display: block;
     padding: 15px;
     text-decoration: none;
@@ -88,179 +35,7 @@ nav ul li a {
     margin: 0 10px;
 }
 
-.block {
-    margin: 16px 0;
-}
-
-.intro {
-    display: flex;
-    font-family: "Lexend", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    height: 100vh;
-    align-items: center;
-}
-
-.intro>section {
-    width: 60%;
-    position: relative;
-}
-
-.intro h1 {
-    font-size: 56px;
-}
-
-.triangle-left {
-    width: 0;
-    transform: rotate(73deg);
-    right: 100px;
-    position: absolute;
-    height: 0;
-    border-top: 100px solid transparent;
-    border-right: 150px solid #e52122;
-    border-bottom: 100px solid transparent;
-}
-
-.circle {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    background-color: #fad805;
-    border-radius: 50%;
-    right: 46%;
-    top: 45px;
-}
-
-.square {
-    height: 150px;
-    width: 150px;
-    background-color: #0f4cb0;
-    transform: rotate(80deg);
-    position: absolute;
-    bottom: 5px;
-    right: 30%;
-}
-
-.bigSquare {
-
-    height: 150px;
-    width: 150px;
-    background-color: #0f4cb0;
-    transform: rotate(80deg);
-    position: absolute;
-    bottom: 5px;
-    right: 30%;
-}
-
-.mask1 {
-
-    mask-repeat: no-repeat;
-    mask-image: url(img/picture_of_me.jpg);
-}
-
-h2 {
-    margin-bottom: 8px;
-}
-
-h2::before {
-    content: "";
-    width: 4rem;
-    height: 5px;
-    display: block;
-    background: #e52122;
-
-}
-
-.aboutMe {
-    font-weight: 400;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-}
-
-.aboutMe .aboutMeContent {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 70%;
-}
-
-.aboutMe .figureContainer {
-    width: 30%;
-}
-
-.cards {
-    display: flex;
-    gap: 16px;
-
-}
-
-.card {
-    width: 23%;
-    border-radius: 5px;
-    overflow: hidden;
-    border: solid 1px lightgrey;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-bottom: 8px;
-}
-
-.card figure {
-    width: 100%;
-    margin: 0;
-}
-
-.card article {
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-
-
-
-
-/* Figure roatation testing  */
-
-.imagecontainer {
-    display: block;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    border: solid 15px #fad805;
-    transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(25deg);
-    position: relative;
-
-}
-
-.imagecontainer img {
-
-    transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-25deg);
-    position: absolute;
-    top: -50px;
-    left: -20px;
-    width: 150%;
-    max-width: unset;
-}
-
-
-
-
-
-/* SHIFT */
-nav.shift ul li a {
-    position: relative;
-    z-index: 1;
-}
-
-nav.shift ul li a:after {
+nav ul li a:after {
     display: block;
     position: absolute;
     top: 0;
@@ -278,95 +53,59 @@ nav.shift ul li a:after {
     z-index: -1;
 }
 
-nav.shift ul li a:hover:after {
+nav ul li a:hover:after {
     opacity: 1;
     visibility: visible;
     height: 100%;
 }
 
-
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-    transition: all .6s;
+.triangle-left {
+    width: 0;
+    transform: rotate(73deg);
+    right: 100px;
+    /* position: absolute; */
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 60px solid #e52122;
+    border-bottom: 40px solid transparent;
 }
 
-@media screen and (min-width: 375px) and (max-width: 600px) {
-    body {
-        background-color: lightgreen;
-        /* width: 90%; */
-        margin: auto;
-    }
+.circle {
+    height: 50px;
+    width: 50px;
+    /* position: absolute; */
+    background-color: #fad805;
+    border-radius: 50%;
+    right: 46%;
+    top: 45px;
+}
 
-    header {
-        display: flex;
-        padding: 5px;
-    }
-
-    header figure {
-        width: 10%;
-        margin: 0;
-    }
-
-    header nav {
-        display: none;
-    }
-
-    main {
-        width: 90%;
-        margin: auto;
-    }
-
-    .intro {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .intro>section {
-        width: 100%;
-    }
-
-    .intro h1 {
-        font-size: 20px;
-    }
-    .triangle-left {
-        width: 0;
-        transform: rotate(73deg);
-        right: 100px;
-        position: unset;
-        height: 0;
-        border-top: 25px solid transparent;
-        border-right: 50px solid #e52122;
-        border-bottom: 25px solid transparent;
-    }
-
-    .circle {
-        height: 50px;
-        width: 50px;
-        position: unset;
-        background-color: #fad805;
-        border-radius: 50%;
-        right: 46%;
-        top: 45px;
-    }
-
-    .square {
-        height: 50px;
-        width: 50px;
-        background-color: #0f4cb0;
-        transform: rotate(80deg);
-        position: unset;
-        bottom: 5px;
-        right: 30%;
-    }
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: #0f4cb0;
+    transform: rotate(80deg);
+    /* position: absolute; */
+    bottom: 5px;
+    right: 30%;
+}
 
 
-    .aboutMe {
-        flex-direction: column;
-    }
 
-    .aboutMe .aboutMeContent {
-        width: 100%;
-    }
+
+/* Media Queries */
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 640px) and (orientation: landscape) {
+
 }
