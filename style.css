@@ -197,7 +197,72 @@ h2 {
 }
 
 
+.projects{
+    padding: 4em 12px;
+    margin: auto;
+    
+}
+.cards {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+flex-wrap: wrap;
+}
+
+.card {
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+    /* border: solid 1px lightgrey; */
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.card figure {
+    width: 100%;
+    margin: 0;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.card article {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+.contact h2, .projects h2 {
+    margin-bottom: 12px;
+}
+
+.contact h2::before ,.projects h2::before {
+    content: "";
+    width: 4rem;
+    height: 5px;
+    display: block;
+    background: #fad805;
+    margin-bottom: 5px;
+
+}
+
 /* Media Queries */
+
+@media (min-width: 425px) {
+    .cards {
+        gap: 16px 0 ;
+        justify-content: space-between;
+    }
+    .card{
+        width: 48%;
+    }
+
+}
 @media (min-width: 640px) {
  header figure {
     width: 10%;
@@ -247,6 +312,9 @@ h2 {
     .introduction article{
         padding: 0 6em;
     }
+    .card {
+        width: 30%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -258,6 +326,13 @@ h2 {
     }
     .introduction article{
         padding: 0 14em;
+    }
+    .cards{
+        justify-content: start;
+        gap: 16px;
+    }
+    .card{
+        width: 24%;
     }
 }
 
