@@ -75,8 +75,8 @@ nav ul li a:hover:after {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
-    padding: 16px;
+    gap: 1em;
+    padding: 1em;
     height: 100vh;
 }
 
@@ -96,7 +96,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    gap: 16px;
+    gap: 1em;
 }
 
 
@@ -145,12 +145,14 @@ h2 {
     padding-top: 8em;
     color: white;
     text-align: center;
-    padding: 8em 16px 12em;
+    padding: 8em 1em 12em;
     line-height: 1.2;
 }
-.introduction h2{
+
+.introduction h2 {
     padding: 24px;
 }
+
 .skills {
     margin-top: -8em;
     width: 90%;
@@ -159,7 +161,7 @@ h2 {
     justify-self: center;
 }
 
-.skills > div{
+.skills>div {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -171,8 +173,8 @@ h2 {
 }
 
 .skills .designBox {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 
 
 }
@@ -197,16 +199,18 @@ h2 {
 }
 
 
-.projects{
-    padding: 4em 12px;
+.contact,
+.projects {
+    padding: 3em 1em;
     margin: auto;
-    
+
 }
+
 .cards {
     display: flex;
-    gap: 16px;
+    gap: 1em;
     justify-content: center;
-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -237,11 +241,13 @@ flex-wrap: wrap;
 
 
 
-.contact h2, .projects h2 {
+.contact h2,
+.projects h2 {
     margin-bottom: 12px;
 }
 
-.contact h2::before ,.projects h2::before {
+.contact h2::before,
+.projects h2::before {
     content: "";
     width: 4rem;
     height: 5px;
@@ -255,18 +261,21 @@ flex-wrap: wrap;
 
 @media (min-width: 425px) {
     .cards {
-        gap: 16px 0 ;
+        gap: 1em 0;
         justify-content: space-between;
     }
-    .card{
+
+    .card {
         width: 48%;
     }
 
 }
+
 @media (min-width: 640px) {
- header figure {
-    width: 10%;
-}
+    header figure {
+        width: 10%;
+    }
+
     .triangle {
         width: 0px;
         height: 0px;
@@ -275,7 +284,7 @@ flex-wrap: wrap;
         border-color: transparent transparent #e52122 transparent;
         transform: rotate(0deg);
     }
-    
+
     .circle {
         height: 80px;
         width: 80px;
@@ -285,7 +294,7 @@ flex-wrap: wrap;
         right: 46%;
         top: 45px;
     }
-    
+
     .square {
         height: 80px;
         width: 80px;
@@ -295,43 +304,54 @@ flex-wrap: wrap;
         bottom: 5px;
         right: 30%;
     }
-    .skills{
+
+    .skills {
         flex-direction: row;
         gap: 24px;
         text-align: center;
     }
+
     .skills .codeBox {
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-    
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+
     }
-    
+
 }
 
 @media (min-width: 768px) {
-    .introduction article{
+    .introduction article {
         padding: 0 6em;
     }
+
     .card {
         width: 30%;
     }
 }
 
 @media (min-width: 1024px) {
-    .skills{
+    header figure {
+        width: 5em;
+    }
+
+    .skills {
         justify-content: center;
     }
-    .skills > div{
+
+    .skills>div {
         width: 40%;
     }
-    .introduction article{
+
+    .introduction article {
         padding: 0 14em;
     }
-    .cards{
+
+    .cards {
         justify-content: start;
-        gap: 16px;
+        gap: 1em;
     }
-    .card{
+
+    .card {
         width: 24%;
     }
 }
