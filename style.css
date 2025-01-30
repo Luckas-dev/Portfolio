@@ -333,6 +333,43 @@ h2 {
     header figure {
         width: 5em;
     }
+    .hero{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        font-size: 38px;
+    }
+    .heroLine{
+        width: 60%;
+    }
+    .geoFigureContainer{
+        position: relative;
+        width: 35%;
+        height: 80%;
+    }
+    .square {
+        height: 150px;
+        width: 150px;
+        transform: rotate(80deg);
+        position: absolute;
+        bottom: 25%;
+        right: 5px;
+    }
+
+    .circle {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left: 0px;
+        top: 25%;
+    }
+
+    .triangle {
+        border-width: 0 99px 150px 99px;
+        transform: rotate(215deg);
+        position: absolute;
+        top: 60px;
+        left: 40%;
+    }
 
     .skills {
         justify-content: center;
@@ -356,4 +393,10 @@ h2 {
     }
 }
 
+@media (min-width: 1440px) {
+    .introduction article {
+        padding: 0 26em;
+    }
+}
+/* 1440 */
 @media (min-width: 640px) and (orientation: landscape) {}
