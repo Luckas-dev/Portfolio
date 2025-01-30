@@ -1,28 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@600&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
-    font-family: "Lexend", serif;
+body {
+    font-family: "Inter", serif;
     font-weight: 400;
-    
+    font-size: 16px;
+
 }
-header{
+
+header {
     position: absolute;
     width: 100%;
 }
-header .hContainer{
+
+header .hContainer {
     padding: 12px;
 
 }
-header figure{
+
+header figure {
     width: 15%;
 }
-header figure img{
+
+header figure img {
     width: 100%;
 }
-header nav ul {
 
-}
+header nav ul {}
 
 header nav ul li {
     text-decoration: none;
@@ -77,12 +80,19 @@ nav ul li a:hover:after {
     height: 100vh;
 }
 
-.hero h1{
+.hero h1 {
     text-align: center;
     font-size: 30px;
+    font-family: "Lexend", serif;
 
 }
-.geoFigureContainer{
+
+h2 {
+    font-size: 25px;
+    font-family: "Lexend", serif;
+}
+
+.geoFigureContainer {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -90,16 +100,16 @@ nav ul li a:hover:after {
 }
 
 
-.triangle-left {
+/* .triangle-left {
     width: 0;
     transform: rotate(50deg);
     right: 100px;
-    /* position: absolute; */
+     position: absolute;
     height: 0;
     border-top: 40px solid transparent;
     border-right: 60px solid #e52122;
     border-bottom: 40px solid transparent;
-}
+} */
 
 .triangle {
     width: 0px;
@@ -108,7 +118,7 @@ nav ul li a:hover:after {
     border-width: 0 33px 50px 33px;
     border-color: transparent transparent #e52122 transparent;
     transform: rotate(0deg);
- }
+}
 
 .circle {
     height: 50px;
@@ -130,22 +140,125 @@ nav ul li a:hover:after {
     right: 30%;
 }
 
+.introduction {
+    background-color: #0f4cb0;
+    padding-top: 8em;
+    color: white;
+    text-align: center;
+    padding: 8em 16px 12em;
+    line-height: 1.2;
+}
+.introduction h2{
+    padding: 24px;
+}
+.skills {
+    margin-top: -8em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
 
+.skills > div{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+    padding: 2em 0;
+    gap: 12px;
+}
+
+.skills .designBox {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+
+}
+
+
+.circleBg {
+    width: 50px;
+    height: 50px;
+    background: #e52122;
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.circleBg .innerCircle {
+    width: 70%;
+    display: flex;
+}
 
 
 /* Media Queries */
 @media (min-width: 640px) {
-
+ header figure {
+    width: 10%;
+}
+    .triangle {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 52.8px 80px 52.8px;
+        border-color: transparent transparent #e52122 transparent;
+        transform: rotate(0deg);
+    }
+    
+    .circle {
+        height: 80px;
+        width: 80px;
+        /* position: absolute; */
+        background-color: #fad805;
+        border-radius: 50%;
+        right: 46%;
+        top: 45px;
+    }
+    
+    .square {
+        height: 80px;
+        width: 80px;
+        background-color: #0f4cb0;
+        /* transform: rotate(80deg); */
+        /* position: absolute; */
+        bottom: 5px;
+        right: 30%;
+    }
+    .skills{
+        flex-direction: row;
+        gap: 24px;
+        text-align: center;
+    }
+    .skills .codeBox {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    
+    }
+    
 }
 
 @media (min-width: 768px) {
-
+    .introduction article{
+        padding: 0 6em;
+    }
 }
 
 @media (min-width: 1024px) {
-
+    .skills{
+        justify-content: center;
+    }
+    .skills > div{
+        width: 40%;
+    }
+    .introduction article{
+        padding: 0 14em;
+    }
 }
 
-@media (min-width: 640px) and (orientation: landscape) {
-
-}
+@media (min-width: 640px) and (orientation: landscape) {}
