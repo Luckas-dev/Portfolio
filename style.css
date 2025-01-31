@@ -159,6 +159,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    text-align: center;
 }
 
 .skills>div {
@@ -175,10 +176,7 @@ h2 {
 .skills .designBox {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-
-
 }
-
 
 .circleBg {
     width: 50px;
@@ -214,7 +212,7 @@ h2 {
 }
 
 .card {
-    width: 90%;
+    width: 100%;
     border-radius: 5px;
     overflow: hidden;
     /* border: solid 1px lightgrey; */
@@ -233,13 +231,11 @@ h2 {
 }
 
 .card article {
-    padding: 8px;
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 1em;
 }
-
-
 
 .contact h2,
 .projects h2 {
@@ -254,7 +250,6 @@ h2 {
     display: block;
     background: #fad805;
     margin-bottom: 5px;
-
 }
 
 /* Media Queries */
@@ -314,7 +309,6 @@ h2 {
     .skills .codeBox {
         border-top-left-radius: 1em;
         border-top-right-radius: 1em;
-
     }
 
 }
@@ -333,26 +327,30 @@ h2 {
     header figure {
         width: 5em;
     }
-    .hero{
+
+    .hero {
         flex-direction: row-reverse;
         justify-content: space-between;
         font-size: 38px;
     }
-    .heroLine{
+
+    .heroLine {
         width: 60%;
     }
-    .geoFigureContainer{
+
+    .geoFigureContainer {
         position: relative;
         width: 35%;
         height: 80%;
     }
+
     .square {
         height: 150px;
         width: 150px;
         transform: rotate(80deg);
         position: absolute;
         bottom: 25%;
-        right: 5px;
+        right: 0%;
     }
 
     .circle {
@@ -397,6 +395,47 @@ h2 {
     .introduction article {
         padding: 0 26em;
     }
+
+    .heroLine {
+        width: 40%;
+        padding: 4em;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .geoFigureContainer {
+        width: 40%;
+        height: 60%;
+    }
+    .square {
+        height: 150px;
+        width: 150px;
+        transform: rotate(16deg);
+        position: absolute;
+        bottom: 30%;
+        right: 8%;
+    }
+
+    .circle {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left: 0px;
+        top: 25%;
+    }
+
+    .triangle {
+        border-width: 0 99px 150px 99px;
+        transform: rotate(195deg);
+        position: absolute;
+        top: 20px;
+        left: 25%;
+    }
+
+
 }
+
 /* 1440 */
 @media (min-width: 640px) and (orientation: landscape) {}
